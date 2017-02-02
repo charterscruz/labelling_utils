@@ -2,7 +2,6 @@
 """
 This objective of this script is to get gt file's names (seagull format) and compute several stats
 Ideally this might get the file's from a script (get_stats.sh)
-
 """
 
 import numpy as np
@@ -13,7 +12,6 @@ import matplotlib.ticker as ticker
 
 
 def main(argv):
-#    pycaffe_dir = os.path.dirname(__file__)
 
     parser = argparse.ArgumentParser()
     # Required arguments: input files.
@@ -59,7 +57,6 @@ def main(argv):
 
     # Prepare to plot areas
     hfont = {'fontname':'FreeSerif'}
-
     fig, ax = plt.subplots(figsize=(4,3))
     plt.hist(area, normed=True)
     plt.xlabel('area of BB', fontsize=14, )

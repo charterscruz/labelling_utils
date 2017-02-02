@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+"""
+The goal of this script if to remap ground truth files from a given resolution to another
+"""
+
 import numpy as np
 import sys
 import argparse
-
-
-print "Starting script..."
 
 
 def main(argv):
@@ -54,7 +56,6 @@ def main(argv):
     label_file[:, 5] = label_file[:, 5] * fy
 
     np.savetxt(args.output_results_file, label_file, fmt = '%1.4f')
-
 
 
 if __name__ == '__main__':
