@@ -4,7 +4,6 @@ echo "The folder to use is  $1 "
 echo "The video to use is  $2 "
 
 
-
 ls $1/images
 
 #rm $1/images/*.jpg

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-This objective of this script is to look for all video files in a folder and compute several stats
-Right now only the number of frames os being calculated±
+The objective of this script is to look for all video files in a folder and compute several stats
+Right now only the number of frames is being calculated
 """
 
 import numpy as np

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-This objective of this script is to look for gt files (kitty format) in a folder and compute several stats
+The objective of this script is to look for gt files (kitty format) in a folder and compute several stats
 """
 
 import numpy as np
@@ -9,7 +9,6 @@ import argparse
 import glob, os
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
-
 
 
 def main(argv):
@@ -29,7 +28,6 @@ def main(argv):
 
     area = np.array(1)
 
-
     min_width = 10000000000
     min_height = 10000000000
 
@@ -39,7 +37,7 @@ def main(argv):
 
         if (np.shape(data)) == (0,):
             pass # empty
-            # print 'empty'
+
         elif len(np.shape(data)) == 1:
             width = float(data[6]) - float(data[4])
             height = float(data[7]) - float(data[5])
@@ -63,8 +61,7 @@ def main(argv):
                 if 0 < float(data[row_ptr, 7]) - float(data[row_ptr, 5]) < min_height:
                     min_height = float(data[row_ptr, 7]) - float(data[row_ptr, 5])
 
-    print('min_height', min_height)
-    print('min_width', min_width)
+    print('min height and width', min_height, min_width)
 
     max_width = min_width
     max_height = min_height
@@ -89,15 +86,12 @@ def main(argv):
                 if float(data[row_ptr, 7]) - float(data[row_ptr, 5]) > min_height:
                     max_height = float(data[row_ptr, 7]) - float(data[row_ptr, 5])
 
-    print('max_height', max_height)
-    print('max_width', max_width)
-
-    print np.shape(area)
+    print('max height and width', max_height, max_width)
 
     hfont = {'fontname': 'FreeSerif'}
 
     fig, ax = plt.subplots(figsize=(4, 3))
-    # plt.xticks(rotation='vertical')
+
     plt.hist(area, normed=True)
     plt.xlabel('area of BB', fontsize=14, )
     plt.xlabel('xlabel', **hfont)

@@ -1,3 +1,9 @@
+"""
+The objective of this script is to load a video and save it as images in a folder
+This does NOT consider detections or Ground truth files
+"""
+
+
 import numpy as np
 import cv2
 import sys
