@@ -3,7 +3,7 @@ This repository contains scripts used to transform, get information, etc from la
 
 get_SEAGULL_stats.sh
 This bash script is used to call get_SEAGULL_stats.sh
-Input argument is a folder in which should be seagull gt files
+Input argument is a folder in which should be seagull gt files0
 
 get_SEAGULL_stats.py
 This scripts determines the minimum and maximum size of the objects in a SEAGULL gt file,
