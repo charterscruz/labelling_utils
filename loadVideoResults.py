@@ -93,7 +93,7 @@ def main(argv):
         cv2.waitKey(1)
         # Save images in folder specified
         strName= "%08i.tif" % frameCounter
-        cv2.imwrite(args.output_folder+strName, img)  # ,  [int(cv2.IMWRITE_JPEG_QUALITY), 90]
+        # cv2.imwrite(args.output_folder+strName, img)  # ,  [int(cv2.IMWRITE_JPEG_QUALITY), 90]
 
         print('frame number: ', frameCounter)
         frameCounter=frameCounter+1

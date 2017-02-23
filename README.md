@@ -26,6 +26,9 @@ This script takes a results file (or GT) and a video and overlays bounding boxes
 
 loadVideoSaveImages.py
 This script takes a results file (or GT) and a video and overlays bounding boxes on images and saves these images.
+
+visualize_results.py
+this script shows results and gt for a given clip
  
  NOTE 1: The format used for seagull GT is:
  frame_number x y width height object_id temporary/final
