@@ -92,8 +92,10 @@ def main(argv):
         cv2.imshow('test',img)
         cv2.waitKey(1)
         # Save images in folder specified
-        strName= "%08i.tif" % frameCounter
-        # cv2.imwrite(args.output_folder+strName, img)  # ,  [int(cv2.IMWRITE_JPEG_QUALITY), 90]
+        # strName= "%08i.tif" % frameCounter
+        strName= "%08i.jpg" % frameCounter
+        # cv2.imwrite(args.output_folder+strName, img)  # TIF
+        cv2.imwrite(args.output_folder+strName, img,  [int(cv2.IMWRITE_JPEG_QUALITY), 90]) # JPEG
 
         print('frame number: ', frameCounter)
         frameCounter=frameCounter+1
