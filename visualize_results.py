@@ -55,10 +55,13 @@ def main(argv):
                 cv2.imshow('image', img)
             key = cv2.waitKey(0)
 
-        print(key)
+        print('key', key)
         if key == 1048603:
             return 0
 
+        elif key == 27:         # wait for ESC key to exit    
+            cv2.destroyAllWindows()
+            return 0
 
 if __name__ == '__main__':
     main(sys.argv)
